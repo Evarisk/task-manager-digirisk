@@ -1,0 +1,15 @@
+{
+	"name": "Task Manager Digirisk",
+	"slug": "task-manager-digirisk",
+	"version": "1.0.0.0",
+	"description": "L'application Task Manager Digirisk",
+	"insert_scripts_pages": [
+		"toplevel_page_wpeomtm-dashboard"
+	],
+	"modules": [
+		"core/core.config.json",
+		"core/external/wpeo_log/wpeo_log.config.json",
+		"core/external/wpeo_model_tmp/wpeo_model.config.json"
+	],
+	"debug": true
+}

@@ -1,0 +1,33 @@
+<?php
+/**
+ * Fichier boot du plugin
+ *
+ * @package TaskManager\Plugin
+ */
+
+namespace task_manager_digirisk;
+
+/**
+ * Plugin Name: Task Manager Digirisk
+ * Description:
+ * Version: 1.0.0.0
+ * Author: Eoxia <dev@eoxia.com>
+ * Author URI: http://www.eoxia.com/
+ * License: GPL2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: task-manager-digirisk
+ * Domain Path: /language
+ */
+
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+DEFINE( 'PLUGIN_TASK_MANAGER_DIGIRISK_PATH', realpath( plugin_dir_path( __FILE__ ) ) . '/' );
+DEFINE( 'PLUGIN_TASK_MANAGER_DIGIRISK_URL', plugins_url( basename( __DIR__ ) ) . '/' );
+DEFINE( 'PLUGIN_TASK_MANAGER_DIGIRISK_DIR', basename( __DIR__ ) );
+
+require_once 'core/external/wpeo_util/singleton.util.php';
+require_once 'core/external/wpeo_util/init.util.php';
+require_once 'core/external/wpeo_log/class/log.class.php';
+
+Init_util::g()->exec( PLUGIN_TASK_MANAGER_DIGIRISK_PATH, basename( __FILE__, '.php' ) );
+View_Util::g()->set_path( PLUGIN_TASK_MANAGER_DIGIRISK_PATH . 'module/' );
