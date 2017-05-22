@@ -39,7 +39,7 @@ class Task_Manager_Digirisk_Action {
 		$query = '';
 
 		ob_start();
-		echo do_shortcode( '[task post_parent="' . implode( $risks_id, ',' ) . '" with_wrapper="0"]' );
+		echo do_shortcode( '[task post_parent="' . implode( $risks_id, ',' ) . '" posts_per_page="-1" with_wrapper="0"]' );
 		wp_send_json_success( array(
 			'namespace' => 'taskManager',
 			'module' => 'task',
